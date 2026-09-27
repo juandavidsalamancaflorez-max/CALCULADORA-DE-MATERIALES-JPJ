@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CALCULADORA DE INSUMOS</title>
+        <meta name="description" content="Taller de Interfaces G7, pagina web de Urban Threads">
+        <meta name="keywords" content="pagina, web, html, css">
+        <meta name="author" content="Lucia Yara, Juan David, Jonatan Pascuas">
+        <link rel="shortcut icon" href="img/icon.png" sizes="20x20">
+        <script src="https://kit.fontawesome.com/9d1a86738f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="img/icon.png" alt="Calculadora de Insumos"></img>
+            <h1>CALCULADORA DE INSUMOS</h1>
+            <i class="icons fa-solid fa-bars"></i>
+        </header>
+        <main>
+            <!--INICIO SESION------------------------------------------------------------------->
+            <div class="card" id="pantalla-login">
+                <h2>Iniciar sesión</h2>
+                <div class="input-container">
+                <label for="login-user"><i class="fa-solid fa-user"></i> Usuario</label>
+                <input type="text" id="login-user" placeholder="Ingrese su usuario">
+            </div>
+            <div class="input-container">
+                <label for="login-pass"><i class="fa-solid fa-lock"></i> Contraseña</label>
+                <input type="password" id="login-pass" placeholder="Ingrese su contraseña">
+            </div>
+                <a class="button" href="#pantalla-menu">Iniciar sesión</a>
+                <a class="link" href="#pantalla-registro">¿No tienes cuenta? Regístrate</a>
+                <a class="link" href="#pantalla-recuperar">¿Olvidaste tu contraseña? Recupérala</a>
+            </div>
+            <!--AQUI PODEMOS RECUPERAR NUESTRO USUARIO--------------------------------------------->
+            <div class="card" id="pantalla-recuperar">
+                <h2>Recuperar Cuenta</h2>
+                <div class="input-container">
+                <label for="recuperar-user"><i class="fa-solid fa-user"></i> Confirmar correo</label>
+                <input type="text" id="recuperar-user" placeholder="Ingrese su correo electrónico">
+            </div>
+            <div class="input-container">
+                <label for="recuperar-pass"><i class="fa-solid fa-lock"></i> Nueva contraseña</label>
+                <input type="password" id="recuperar-pass" placeholder="Ingrese su nueva contraseña">
+            </div>
+                <a class="button" href="#pantalla-login">Recuperar contraseña</a>
+                <a class="link" href="#pantalla-login">¿Ya tienes cuenta? Inicia sesión</a>
+            </div>
+            <div class="card" id="pantalla-registro">
+                <h2>Registro</h2>
+                <div class="input-container">
+                <label for="reg-user"><i class="fa-solid fa-user"></i> Usuario</label>
+                <input type="text" id="reg-user" placeholder="Crea un usuario">
+            </div>
+            <div class="input-container">
+                <label for="reg-pass"><i class="fa-solid fa-lock"></i> Contraseña</label>
+                <input type="password" id="reg-pass" placeholder="Crea una contraseña">
+            </div>
+            <div class="input-container">
+                <label for="reg-pass2"><i class="fa-solid fa-lock"></i> Confirmar contraseña</label>
+                <input type="password" id="reg-pass2" placeholder="Repite la contraseña">
+            </div>
+                <a class="button" href="#pantalla-login">Registrarse</a>
+                <a class="link" href="#pantalla-login">¿Ya tienes cuenta? Inicia sesión</a>
+            </div>
+            <!--MENU------------------------------------------------------------------->
+            <div class="card" id="pantalla-menu">
+                <div class="welcome">
+                    <h2>Índice General</h2>
+                    <p>Bienvenido/a, usuario de ejemplo</p>
+                </div>
+                <a class="menu-btn" href="#calculo-muro">1 - Calcular muro de ladrillo</a>
+                <a class="menu-btn" href="#calculo-viga">2 - Calcular viga de hormigón</a>
+                <a class="menu-btn" href="#calculo-columna">3 - Calcular columnas de hormigón</a>
+                <a class="menu-btn" href="#calculo-contrapiso">4 - Calcular contrapisos</a>
+                <a class="menu-btn" href="#calculo-techo">5 - Calcular techo</a>
+                <a class="menu-btn" href="#calculo-pisos">6 - Calcular pisos</a>
+                <a class="menu-btn" href="#calculo-pintura">7 - Calcular pintura</a>
+                <a class="menu-btn salir" href="#pantalla-login">8 - Salir</a>
+            </div>
+            <!--muro de ladrillo------------------------------------------------->
+            <div class="card calculation" id="calculo-muro">
+                <h2>Calcular Muro de Ladrillo</h2>
+                <div class="input-container">
+                    <label for="espesor-muro">Espesor del muro</label>
+                    <select id="espesor-muro">
+                        <option>20 cm</option>
+                        <option>30 cm</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="largo-muro">Largo (metros)</label>
+                    <input type="number" id="largo-muro" value="5" step="0.01">
+                </div>
+                <div class="input-container">
+                    <label for="alto-muro">Alto (metros)</label>
+                    <input type="number" id="alto-muro" value="2.5" step="0.01">
+                </div>
+                <div class="resultado">
+                    <p><strong>Superficie:</strong> 12.50 m²</p>
+                    <p><strong>Cemento:</strong> 136.25 kg</p>
+                    <p><strong>Arena:</strong> 1.125 m³</p>
+                    <p><strong>Ladrillos:</strong> 1125 unidades</p>
+                </div>
+                <a class="button btn-secondary" href="#pantalla-menu">Volver al menú</a>
+            </div>
+            <!--viga de hormigón ----------------------------------------------->
+            <div class="card calculation" id="calculo-viga">
+                <h2>Calcular Viga de Hormigón</h2>
+                <div class="input-container">
+                    <label for="largo-viga">Largo de la viga (metros)</label>
+                    <input type="number" id="largo-viga" value="4" step="0.01">
+                </div>
+                <div class="resultado">
+                    <p><strong>Cemento:</strong> 36.00 kg</p>
+                    <p><strong>Arena:</strong> 0.080 m³</p>
+                    <p><strong>Piedra:</strong> 0.080 m³</p>
+                    <p><strong>Hierro del 8:</strong> 16.00 m</p>
+                    <p><strong>Hierro del 4:</strong> 12.00 m</p>
+                </div>
+                <a class="button btn-secondary" href="#pantalla-menu">Volver al menú</a>
+            </div>
+            <!--columnas de hormigón -------------------------------------->
+            <div class="card calculation" id="calculo-columna">
+                <h2>Calcular Columnas de Hormigón</h2>
+                <div class="input-container">
+                    <label for="largo-columna">Largo de la columna (metros)</label>
+                    <input type="number" id="largo-columna" value="3" step="0.01">
+                </div>
+                <div class="resultado">
+                    <p><strong>Cemento:</strong> 22.50 kg</p>
+                    <p><strong>Arena:</strong> 0.048 m³</p>
+                    <p><strong>Piedra:</strong> 0.048 m³</p>
+                    <p><strong>Hierro del 10:</strong> 18.00 m</p>
+                    <p><strong>Hierro del 4:</strong> 9.00 m</p>
+                </div>
+                <a class="button btn-secondary" href="#pantalla-menu">Volver al menú</a>
+            </div>
+            <!--contrapisos ----------------------------------------------->
+            <div class="card calculation" id="calculo-contrapiso">
+                <h2>Calcular Contrapisos</h2>
+                <div class="input-container">
+                    <label for="espesor-contrapiso">Espesor (metros)</label>
+                    <input type="number" id="espesor-contrapiso" value="0.10" step="0.01">
+                </div>
+                <div class="input-container">
+                    <label for="ancho-contrapiso">Ancho (metros)</label>
+                    <input type="number" id="ancho-contrapiso" value="4" step="0.01">
+                </div>
+                <div class="input-container">
+                    <label for="largo-contrapiso">Largo (metros)</label>
+                    <input type="number" id="largo-contrapiso" value="5" step="0.01">
+                </div>
+                <div class="resultado">
+                    <p><strong>Volumen:</strong> 2.000 m³</p>
+                    <p><strong>Cemento:</strong> 210.00 kg</p>
+                    <p><strong>Arena:</strong> 0.900 m³</p>
+                    <p><strong>Piedra:</strong> 1.800 m³</p>
+                </div>
+                <a class="button btn-secondary" href="#pantalla-menu">Volver al menú</a>
+            </div>
+            <!--techo ----------------------------------------------------->
+            <div class="card calculation" id="calculo-techo">
+                <h2>Calcular Techo</h2>
+                <div class="input-container">
+                    <label for="espesor-techo">Espesor (metros)</label>
+                    <input type="number" id="espesor-techo" value="0.12" step="0.01">
+                </div>
+                <div class="input-container">
+                    <label for="ancho-techo">Ancho (metros)</label>
+                    <input type="number" id="ancho-techo" value="6" step="0.01">
+                </div>
+                <div class="input-container">
+                    <label for="largo-techo">Largo (metros)</label>
+                    <input type="number" id="largo-techo" value="8" step="0.01">
+                </div>
+                <div class="resultado">
+                    <p><strong>Superficie:</strong> 48.00 m²</p>
+                    <p><strong>Cemento:</strong> 1584.00 kg</p>
+                    <p><strong>Arena:</strong> 3.456 m³</p>
+                    <p><strong>Piedra:</strong> 3.456 m³</p>
+                    <p><strong>Hierro del 8:</strong> 336.00 m</p>
+                    <p><strong>Hierro del 6:</strong> 192.00 m</p>
+                </div>
+                <a class="button btn-secondary" href="#pantalla-menu">Volver al menú</a>
+            </div>
+            <!-- pisos ----------------------------------------------------->
+            <div class="card calculation" id="calculo-pisos">
+                <h2>Calcular Pisos</h2>
+                <div class="input-container">
+                    <label for="ancho-pisos">Ancho (metros)</label>
+                    <input type="number" id="ancho-pisos" value="4" step="0.01">
+                </div>
+                <div class="input-container">
+                    <label for="largo-pisos">Largo (metros)</label>
+                    <input type="number" id="largo-pisos" value="5" step="0.01">
+                </div>
+                <div class="resultado">
+                    <p><strong>Superficie real:</strong> 20.00 m²</p>
+                    <p><strong>Con 10% extra:</strong> 22.00 m²</p>
+                </div>
+                <a class="button btn-secondary" href="#pantalla-menu">Volver al menú</a>
+            </div>
+            <!------pintura---- --------------------------------------------------->
+            <div class="card calculation" id="calculo-pintura">
+                <h2>Calcular Pintura</h2>
+                <div class="input-container">
+                    <label for="superficie-pintura">Superficie del muro (m²)</label>
+                    <input type="number" id="superficie-pintura" value="30" step="0.01">
+                </div>
+                <div class="resultado">
+                    <p><strong>Litros de pintura necesarios:</strong> 5.00 L</p>
+                </div>
+                <a class="button btn-secondary" href="#pantalla-menu">Volver al menú</a>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Calculadora - Lucia Yara, Juan David, Jonatan Pascuas</p>
+        </footer>
+    </body>
+</html>
